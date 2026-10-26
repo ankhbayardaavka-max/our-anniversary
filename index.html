@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100c18">
+<title>Our one month anniversary ♡</title>
+
+<style>
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #100c18;
+  color: #fff0f5;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.9;
+}
+#stars {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+main, footer { position: relative; z-index: 1; }
+section {
+  width: min(720px, 88%);
+  margin: auto;
+  padding: 85px 0;
+}
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 32px 20px;
+}
+.eyebrow {
+  color: #e9a9c3;
+  letter-spacing: 3px;
+  font: 11px Arial, sans-serif;
+  text-transform: uppercase;
+}
+h1 {
+  font-size: clamp(43px, 9vw, 76px);
+  line-height: 1.16;
+  font-weight: normal;
+  margin: 25px 0;
+}
+h2 {
+  font-size: clamp(30px, 6vw, 43px);
+  font-weight: normal;
+  line-height: 1.35;
+  color: #f2b6cb;
+}
+p { color: #cbbdce; }
+.hero p { max-width: 440px; }
+.heart {
+  color: #f2b6cb;
+  font-size: 35px;
+  animation: pulse 2s infinite;
+}
+button {
+  padding: 12px 21px;
+  border: 1px solid #d99ab6;
+  border-radius: 40px;
+  background: #f2b6cb12;
+  color: #ffeaf2;
+  cursor: pointer;
+  font-size: 14px;
+  transition: .25s;
+}
+button:hover {
+  background: #f2b6cb2b;
+  transform: translateY(-2px);
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+.card {
+  padding: clamp(22px, 5vw, 36px);
+  margin: 24px 0;
+  border: 1px solid #f2b6cb30;
+  border-radius: 18px;
+  background: #ffffff08;
+}
+.number {
+  color: #e7c9a0;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 3px;
+}
+.memory-title {
+  font-size: 24px;
+  color: #fff0f5;
+  margin: 8px 0;
+}
+.letter {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: #f4e7ed;
+  line-height: 2;
+  font-size: 16px;
+  outline: none;
+  min-height: 100px;
+}
+.letter:focus {
+  outline: 1px dashed #d99ab6;
+  outline-offset: 6px;
+}
+.small {
+  color: #ad9caf;
+  font: 12px Arial, sans-serif;
+}
+.divider {
+  color: #f2b6cb;
+  text-align: center;
+  letter-spacing: 12px;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: .8s;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+footer {
+  text-align: center;
+  padding: 35px 20px 55px;
+  color: #ad9caf;
+  font-size: 13px;
+}
+@keyframes pulse {
+  50% { transform: scale(1.12); opacity: .75; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow">October 27 · 2026</div>
+    <div class="heart">♡</div>
+    <h1>Our one month<br>anniversary.</h1>
+    <p>
+      Even though we're far from each other,
+      the time we spent together is unforgettable.
+    </p>
+    <div class="buttons">
+      <button onclick="document.getElementById('memories').scrollIntoView({behavior:'smooth'})">
+        Our memories ↓
+      </button>
+      <button id="musicButton" onclick="toggleMusic()">♫ Play our song</button>
+    </div>
+    <p class="small">FOR YOU ♡</p>
+  </section>
+
+  <section id="memories" class="reveal">
+    <div class="eyebrow">01 — Our memories</div>
+    <h2>The moments I keep.</h2>
+
+    <article class="card">
+      <div class="number">MEMORY 01</div>
+      <div class="memory-title">Зайсан дээр</div>
+      <p>
+        Зайсан дээр анх хамт очоод сууж,
+        маш их юм ярьж байсан үеэ би санадаг.
+        Чамтай байхдаа ямар тухтай байснаа,
+        хэдэн цаг ярьсан ч дахиад л яримаар
+        санагдаж байснаа санадаг. Чамаас
+        холдмооргүй санагдаж байсан тэр мэдрэмж
+        одоо ч надад үнэ цэнтэй.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="number">MEMORY 02</div>
+      <div class="memory-title">Чиний гэрт</div>
+      <p>
+        Бас чиний гэрт хоносон үе. Тэр үед би
+        ийм зүйл болно гэж төсөөлж байгаагүй.
+        Чиний сэндвич, гоймон, нэг орон дээр
+        хамт унтсан үе гээд жижигхэн мэт зүйлс
+        хүртэл надад маш тухтай, дулаахан
+        санагддаг. Тэр үед надад ямар нэг
+        онцгой зүйл хэрэггүй байсан. Зүгээр л
+        чамтай хамт байх сайхан байсан.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="number">MEMORY 03</div>
+      <div class="memory-title">Чи өөрөө</div>
+      <p>
+        Чиний үнэнч, шулуухан зан надад
+        таалагддаг. Чи сэтгэлдээ байгаа зүйлээ
+        шууд хэлдэг. Заримдаа үнэхээр шулуухан
+        шүү 😭 гэхдээ тэр чинь чиний нэг хэсэг,
+        бас чамайг чи болгодог зүйлсийн нэг.
+      </p>
+    </article>
+  </section>
+
+  <div class="divider">✦ ♡ ✦</div>
+
+  <section class="reveal">
+    <div class="eyebrow">02 — FOR YOU</div>
+    <h2>Happy one month anniversary, mommy.</h2>
+
+    <article class="card">
+      <div id="letter" class="letter" contenteditable="true" spellcheck="false">Happy one month anniversary mommy.
+
+Сүүлийн үед бидний хооронд бүх зүйл амар байгаагүйг би мэдэж байгаа. Би амлалтаа биелүүлээгүй, чамайг гомдоосон. Нэг захидал, нэг вэбсайт бүхнийг шууд засчихна гэж бодохгүй байна..
+
+Зайсан дээр анх хамт очоод сууж, маш их юм ярьж байсан үеэ би санадаг. Чамтай байхдаа ямар тухтай байснаа, хэдэн цаг ярьсан ч дахиад л яримаар санагдаж байснаа санадаг. Чамаас холдмооргүй санагдаж байсан тэр мэдрэмж одоо ч надад үнэ цэнтэй.
+
+Бас чиний гэрт хоносон үе. Тэр үед би ийм зүйл болно гэж төсөөлж байгаагүй. Чиний сэндвич, гоймон, нэг орон дээр хамт унтсан үе гээд жижигхэн мэт зүйлс хүртэл надад маш тухтай, дулаахан санагддаг. Тэр үед надад ямар нэг онцгой зүйл хэрэггүй байсан. Зүгээр л чамтай хамт байх сайхан байсан.
+
+Чиний үнэнч, шулуухан зан надад таалагддаг. Чи сэтгэлдээ байгаа зүйлээ шууд хэлдэг. Заримдаа үнэхээр шулуухан шүү 😭 гэхдээ тэр чинь чиний нэг хэсэг, бас чамайг чи болгодог зүйлсийн нэг..
+
+Би зүгээр л олон том амлалт өгөхийг хүсэхгүй байна. Харин хийж байгаа үйлдлээрээ чамд харуулахыг хүсэж байна. Итгэлийг буцааж бий болгоход хугацаа хэрэгтэйг ойлгож байгаа. Чи миний үгэнд шууд итгэх ёстой гэж би шаардахгүй.
+
+haira i used ai to make website ghdee bugdiig ni bish zgrl code iig yaj bichhig ni harsi zarimudig ni mdku blhor aimr sonirholtoi ym bnle gsh
+
+Бидний хамтдаа бүтээсэн дурсамжууд, надтай өнгөрүүлсэн цаг хугацаа, одоо хүртэл надад үнэ цэнтэй хэвээрээ байгаа тэр жижигхэн мөчүүдэд баярлалаа...
+
+Happy anniversary my dictator.
+
+Энэ вэбсайтыг үзэхдээ бидний дурсамжууд надад ямар их үнэ цэнтэй байдгийг мэдрээсэй гэж хүсэж байна.
+
+Би чамд хайртай. ♡</div>
+
+      <div class="buttons">
+        <button onclick="saveLetter()">♡ Save letter</button>
+        <button onclick="resetLetter()">Reset letter</button>
+      </div>
+      <p id="saveStatus" class="small" aria-live="polite"></p>
+    </article>
+  </section>
+
+  <section class="hero reveal" style="min-height:65vh">
+    <div class="heart">♡</div>
+    <h2>Happy anniversary,<br>my dictator.</h2>
+    <p>Би чамд хайртай. ♡</p>
+    <div class="eyebrow">For you · 2026.10.27</div>
+  </section>
+</main>
+
+<footer>Made for you, with love. ♡</footer>
+
+<audio id="music" loop preload="none">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const letter = document.getElementById("letter");
+const originalLetter = letter.innerHTML;
+const statusText = document.getElementById("saveStatus");
+const music = document.getElementById("music");
+const musicButton = document.getElementById("musicButton");
+
+try {
+  const saved = localStorage.getItem("our-anniversary-letter");
+  if (saved) letter.innerHTML = saved;
+} catch (e) {}
+
+function saveLetter() {
+  try {
+    localStorage.setItem("our-anniversary-letter", letter.innerHTML);
+    statusText.textContent = "Saved on this browser ♡";
+  } catch (e) {
+    statusText.textContent = "Save failed. Edit index.html directly instead.";
+  }
+}
+
+function resetLetter() {
+  if (confirm("Reset the letter to its original version?")) {
+    letter.innerHTML = originalLetter;
+    try {
+      localStorage.removeItem("our-anniversary-letter");
+    } catch (e) {}
+    statusText.textContent = "Letter reset.";
+  }
+}
+
+async function toggleMusic() {
+  if (music.paused) {
+    try {
+      await music.play();
+      musicButton.textContent = "Ⅱ Pause our song";
+      statusText.textContent = "";
+    } catch (e) {
+      statusText.textContent =
+        "Add your music.mp3 file to the website folder first.";
+    }
+  } else {
+    music.pause();
+    musicButton.textContent = "♫ Play our song";
+  }
+}
+
+const canvas = document.getElementById("stars");
+const ctx = canvas.getContext("2d");
+let stars = [];
+let width, height;
+
+function makeStars() {
+  const ratio = Math.min(window.devicePixelRatio || 1, 2);
+  width = window.innerWidth;
+  height = window.innerHeight;
+  canvas.width = width * ratio;
+  canvas.height = height * ratio;
+  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+  stars = Array.from({
+    length: Math.min(140, Math.floor(width * height / 6500))
+  }, () => ({
+    x: Math.random() * width,
+    y: Math.random() * height,
+    r: Math.random() * 1.4 + .3,
+    a: Math.random() * .6 + .2
+  }));
+}
+
+function drawStars() {
+  ctx.clearRect(0, 0, width, height);
+  for (const star of stars) {
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255,225,241,${star.a})`;
+    ctx.fill();
+  }
+  requestAnimationFrame(drawStars);
+}
+
+window.addEventListener("resize", makeStars);
+makeStars();
+drawStars();
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: .1 });
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+} else {
+  document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
+}
+</script>
+</body>
+</html>
